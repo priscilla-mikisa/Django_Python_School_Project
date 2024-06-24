@@ -2,14 +2,14 @@ from django.db import models
 
 # Create your models here.
 class Class(models.Model):
-      class_name= models.CharField(max_length =20)
+      class_name= models.CharField(max_length=20)
       class_id = models.PositiveSmallIntegerField()
-      course = models.CharField(max_length=20)
-      teacher = models.CharField(max_length=20)
-      enrollment = models.PositiveSmallIntegerField()
-      room_number= models.PositiveSmallIntegerField()
-      class_time = models.CharField(max_length=20)
-      meeting_days = models.CharField(max_length=40)
+      names_of_teachers = models.TextField()
+      teachers_for_class = models.TimeField(10, 33, 24)
+      number_of_enrolled_students = models.PositiveSmallIntegerField()
+      number_of_classrooms= models.TextField()
+      class_room_time = models.TimeField(10, 33, 24)
+      meeting_days = models.CharField(max_length=20)
       academic_year = models.PositiveSmallIntegerField()
       class_capacity = models.PositiveSmallIntegerField()
       
